@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dcdbd2;
 }
 
 /* BOOLZAPP */
@@ -22,7 +23,7 @@ div.container-webapp {
 section.contacts-section {
     width: 30%;
     height: 100%;
-    background-color: blue;
+    background-color: white; 
 }
 
 /* header contact section */
@@ -94,4 +95,30 @@ div.headertext.notification {
 
 div.headertext.active-notification {
     text-decoration: underline;
+}
+
+div.searchbar-container {
+    height: 50px;
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+}
+
+div.bd-gray-contacts {
+    color: #bfc3c7;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    padding: .5rem 0;
+    border: .1rem solid #bfc3c7;
+}
+
+div.icon-search > i {
+    padding: 0 1rem;
+}
+
+div.search-bar > input {
+    width: 200px;
+    height: 20px;
+    border: none;
 }
