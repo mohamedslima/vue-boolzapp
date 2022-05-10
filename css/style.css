@@ -30,7 +30,7 @@ section.contacts-section {
 div.header-contacts {
     width: 100%;
     background-color: #eaeaea;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     padding: 0 .4rem;
@@ -61,6 +61,37 @@ div.icon-header-contacts {
 
 div.icon-header-contacts > i {
     margin-left: 1.4rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #b1b1b1;
+}
+
+/* notification section */
+
+div.notification-message {
+    padding: 0 .4rem;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #8edafc;
+}
+
+div.notification-message > div.icon-notification > i {
+    background-color: white;
+    padding: .8rem;
+    border-radius: 50px;
+    color: #8edafc;
+    font-size: 1rem;
+}
+
+div.headertext {
+    font-size: .8rem;
+    margin-left: .5rem;
+}
+
+div.headertext.notification {
+    font-weight: bold;
+}
+
+div.headertext.active-notification {
+    text-decoration: underline;
 }
