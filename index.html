@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <div class="container-webapp">
+    <div id="root" class="container-webapp">
         <!-- contacts in app section -->
         <section class="contacts-section">
 
@@ -77,7 +77,33 @@
             </div>
 
             <!-- user set -->
+            <div  v-for="(contact, index) in contacts" class="user-thumbnail">
 
+                <!-- user img -->
+                <div class="in-line">
+
+                    <!-- icon user -->
+                    <div class="user-img">
+                        <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                    </div>
+                    <div class="ml-1">
+                            <!-- user name -->
+                            <div class="guest-name">
+                                {{contact.name}}
+                            </div>
+
+                            <!-- last message -->
+                            <div class="last-message">
+                                last message
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-last-message">
+                        data
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- message in app section -->

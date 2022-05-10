@@ -95,6 +95,7 @@ div.headertext.notification {
 
 div.headertext.active-notification {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 div.searchbar-container {
@@ -121,4 +122,50 @@ div.search-bar > input {
     width: 200px;
     height: 20px;
     border: none;
+}
+
+/* user set */
+div.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: aqua;
+    contain: content;
+}
+
+div.user-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+div.user-thumbnail {
+    width: 95%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.in-line {
+    display: flex;
+    align-items: center;
+}
+
+div.guest-name {
+    font-size: .9rem;
+}
+
+div.last-message {
+    color: #d7dad7;
+    font-size: .7rem;
+    margin-top: .2rem;
+} 
+
+div.ml-1 {
+    margin-left: .7rem;
+}
+
+div.time-last-message {
+    color: #d7dad7;
+    font-size: .7rem;
 }
