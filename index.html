@@ -77,7 +77,7 @@
             </div>
 
             <!-- user set -->
-            <div  v-for="(contact, index) in contacts" :class="{active: index === activeChat}" @click="getActiveChat(index)" class="user-thumbnail">
+            <div  v-for="(contact, index) in contacts" :class="{active: index === currentChat}" @click="getActiveChat(index)" class="user-thumbnail">
 
                 <div class="in-line">
 
@@ -157,7 +157,7 @@
                 <i class="far fa-smile"></i>  
                 <div>
                     <label for="text">
-                        <input type="text" placeholder="Scrivi un messaggio" name="" id="">
+                        <input type="text" @keyup.enter="NewMessage()" v-model.trim="newMessage" placeholder="Scrivi un messaggio" name="" id="">
                     </label>
                 </div>
                 <i class="fas fa-microphone"></i>

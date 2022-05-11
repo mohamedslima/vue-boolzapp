@@ -156,6 +156,7 @@ div.user-thumbnail {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.034);
     
 }
 
@@ -208,6 +209,7 @@ div.profile-guestname > div {
 div.messages-sect {
     height: calc(100% - 140px);
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 div.new-message {

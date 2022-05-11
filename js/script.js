@@ -117,12 +117,28 @@ Vue.config.devtools = true;
                 }
              ],
              currentChat: 0,
+             newMessage : '',
              now: dayjs().format('HH:mm')
          },
          methods: {
+            //  prende chat index dal ciclo v-for e lo mostra
             getActiveChat(index) {
                 this.currentChat = index;
             },
+            // preleva messaggio utente e la pusha
+            NewMessage() {
+                const message = {
+                    date: this.now,
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                // pusho il messaggio
+                this.contacts[this.currentChat].messages.push(message);
+
+                // ripulisco input
+                this.newMessage ='';
+            }
+
          }
      }
  )
