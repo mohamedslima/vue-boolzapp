@@ -74,6 +74,7 @@ div.icon-header-contacts > i {
     margin-left: 1.4rem;
     font-size: 1rem;
     color: #b1b1b1;
+    cursor: pointer;
 }
 
 /* notification section */
@@ -87,7 +88,7 @@ div.notification-message {
 }
 
 div.notification-message > div.icon-notification > i {
-    background-color: white;
+    background-color: #f2fbff;
     padding: .8rem;
     border-radius: 50px;
     color: #8edafc;
@@ -158,6 +159,10 @@ div.user-thumbnail {
     
 }
 
+div.user-thumbnail:hover {
+    background-color: rgba(128, 128, 128, 0.075);
+}
+
 div.in-line {
     display: flex;
     align-items: center;
@@ -220,6 +225,7 @@ div.new-message {
 div.new-message > i {
     font-size: 1.8rem;
     color: #6a7376;
+    cursor: pointer;
 }
 
 div.new-message > div > label > input {

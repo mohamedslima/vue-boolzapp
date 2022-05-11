@@ -77,7 +77,7 @@
             </div>
 
             <!-- user set -->
-            <div  v-for="(contact, index) in contacts" class="user-thumbnail">
+            <div  v-for="(contact, index) in contacts" :class="{active: index === activeChat}" @click="getActiveChat(index)" class="user-thumbnail">
 
                 <div class="in-line">
 
@@ -93,7 +93,7 @@
 
                             <!-- last message -->
                             <div class="last-message">
-                                last message
+                               
                             </div>
                         </div>
                     </div>
@@ -112,15 +112,15 @@
                 <div class="header-contacts">
 
                     <div class="guest-section">
-    
+                        
                         <!-- profile photo -->
-                        <div class="profile-photo">
-                            
+                        <div class="profile-photo user-img">
+                            <img :src="'img/avatar'+ contacts[currentChat].avatar +'.jpg'" :alt="contacts[currentChat].name">
                         </div>
     
                         <!-- name of my user -->
                         <div class="profile-guestname">
-                            Michele
+                            {{contacts[currentChat].name}}
                             <div>
                                 ultimo accesso alle {{ now }}
                             </div>
