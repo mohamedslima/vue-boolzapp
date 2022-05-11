@@ -210,3 +210,58 @@ div.new-message {
     background-color: dimgray;
 }
 
+div.new-message {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3eeea;
+}
+
+div.new-message > i {
+    font-size: 1.8rem;
+    color: #6a7376;
+}
+
+div.new-message > div > label > input {
+    padding: 10px 290px;
+    border: none;
+}
+
+.current-chat {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+}
+
+.received {
+    background-color: white;
+    margin-left: 1rem;
+    min-width: 450px;
+    max-width: 450px;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: #d5f9ba;
+    margin-right: 5rem;  
+    min-width: 450px;
+    max-width: 450px; 
+}
+
+div.user-message {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+div.date-message {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .7rem;
+    color: #b1b6bf;
+}
+
+
+
+

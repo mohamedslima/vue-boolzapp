@@ -110,11 +110,15 @@ Vue.config.devtools = true;
                              status: 'received'
                          }
                      ],
-                },
-             ]
+                }
+             ],
+             currentChat: 0,
+             now: dayjs().format('HH:mm')
          },
          methods: {
-
+            getActiveChat(index) {
+                this.currentChat = index;
+            },
          }
      }
  )

@@ -122,7 +122,7 @@
                         <div class="profile-guestname">
                             Michele
                             <div>
-                                ultimo accesso
+                                ultimo accesso alle {{ now }}
                             </div>
                         </div>
                     </div>
@@ -136,17 +136,35 @@
                 </div>
             </div>
 
-            <!-- messages typed -->
+            <!-- messages in section-->
             <div class="messages-sect">
-                
+                <div class="current-chat">
+ 
+                    <div v-for="(element, index) in contacts[currentChat].messages"                 
+                         class="user-message"
+                         :class="element.status">
+                        <!-- message -->
+                        <div class="message">{{element.message}}</div>
+                    <!-- date of message -->
+                        <div class="date-message">{{element.date}}</div>
+                    </div>
+        
+                </div>
             </div>
 
             <!-- new messages bar -->
             <div class="new-message">
-
+                <i class="far fa-smile"></i>  
+                <div>
+                    <label for="text">
+                        <input type="text" placeholder="Scrivi un messaggio" name="" id="">
+                    </label>
+                </div>
+                <i class="fas fa-microphone"></i>
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
