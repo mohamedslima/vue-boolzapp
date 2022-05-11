@@ -110,7 +110,7 @@ Vue.config.devtools = true;
                              status: 'received'
                          }
                      ],
-                 }
+                },
              ]
          },
          methods: {

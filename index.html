@@ -21,15 +21,15 @@
 <body>
     <div id="root" class="container-webapp">
         <!-- contacts in app section -->
-        <section class="contacts-section">
+        <div class="contacts-section">
 
             <div class="header-contacts">
 
                 <div class="myname-section">
 
                     <!-- profile photo -->
-                    <div class="profile-photo">
-                        
+                    <div class="user-img">
+                        <img src="img/avatar_7.jpg" alt="">
                     </div>
 
                     <!-- name of my user -->
@@ -79,7 +79,6 @@
             <!-- user set -->
             <div  v-for="(contact, index) in contacts" class="user-thumbnail">
 
-                <!-- user img -->
                 <div class="in-line">
 
                     <!-- icon user -->
@@ -101,15 +100,52 @@
                     <div class="time-last-message">
                         data
                     </div>
-                </div>
-
             </div>
-        </section>
+
+        </div>
 
         <!-- message in app section -->
-        <section class="message-section">
 
-        </section>
+        <div class="message-section">
+            <!-- name of guest contacts -->
+            <div class="header-guest-contacts">
+                <div class="header-contacts">
+
+                    <div class="guest-section">
+    
+                        <!-- profile photo -->
+                        <div class="profile-photo">
+                            
+                        </div>
+    
+                        <!-- name of my user -->
+                        <div class="profile-guestname">
+                            Michele
+                            <div>
+                                ultimo accesso
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- icon for moving -->
+                    <div class="icon-header-contacts">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-link"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- messages typed -->
+            <div class="messages-sect">
+                
+            </div>
+
+            <!-- new messages bar -->
+            <div class="new-message">
+
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
