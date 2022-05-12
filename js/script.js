@@ -99,7 +99,7 @@ Vue.config.devtools = true;
                      ],
                  },
                  {
-                     name: 'Alessandro L.',
+                     name: 'Luca',
                      avatar: '_5',
                      visible: true,
                      messages: [
@@ -117,7 +117,8 @@ Vue.config.devtools = true;
                 }
              ],
              currentChat: 0,
-             newMessage : '',
+             newMessage: '',
+             guestMessage: 'okay',
              now: dayjs().format('HH:mm')
          },
          methods: {
@@ -125,20 +126,33 @@ Vue.config.devtools = true;
             getActiveChat(index) {
                 this.currentChat = index;
             },
-            // preleva messaggio utente e la pusha
-            NewMessage() {
-                const message = {
-                    date: this.now,
-                    message: this.newMessage,
+            
+
+            UserNewMessage() {
+                const newMessage = {
+                    date: this.currentTime,
+                    message: this.newMessage.trim(),
                     status: 'sent'
                 }
-                // pusho il messaggio
-                this.contacts[this.currentChat].messages.push(message);
+                // push solo se c'è 
+                if (this.newMessage.trim().length > 0) {
+                    this.contacts[this.currentChat].messages.push(newMessage);
 
-                // ripulisco input
-                this.newMessage ='';
-            }
+                    // ripulisco 
+                    this.newMessage ='';
 
+                    // genero risposta
+                    setTimeout(() => {
+                        const guestMessage = {
+                        date: this.now,
+                        message: this.guestMessage,
+                        status: 'received'
+                    }
+                        // pusho nell'array
+                        this.contacts[this.currentChat].messages.push(guestMessage);
+                    },1000);
+                }
+            },
          }
      }
  )

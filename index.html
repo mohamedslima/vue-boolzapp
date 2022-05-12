@@ -93,7 +93,7 @@
 
                             <!-- last message -->
                             <div class="last-message">
-                               
+                                {{ element.messages[element.messages].message }}
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                 <i class="far fa-smile"></i>  
                 <div>
                     <label for="text">
-                        <input type="text" @keyup.enter="NewMessage()" v-model.trim="newMessage" placeholder="Scrivi un messaggio" name="" id="">
+                        <input type="text" v-model.trim="newMessage" @keyup.enter="UserNewMessage()" v-model.trim="newMessage" placeholder="Scrivi un messaggio" name="" id="">
                     </label>
                 </div>
                 <i class="fas fa-microphone"></i>
