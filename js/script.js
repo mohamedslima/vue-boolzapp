@@ -119,7 +119,8 @@ Vue.config.devtools = true;
              currentChat: 0,
              newMessage: '',
              guestMessage: 'okay',
-             now: dayjs().format('HH:mm')
+             now: dayjs().format('HH:mm'),
+             search: ''
          },
          methods: {
             //  prende chat index dal ciclo v-for e lo mostra
@@ -130,11 +131,11 @@ Vue.config.devtools = true;
 
             UserNewMessage() {
                 const newMessage = {
-                    date: this.currentTime,
+                    date: this.now,
                     message: this.newMessage.trim(),
                     status: 'sent'
                 }
-                // push solo se c'è 
+                // push solo se c'è carattere
                 if (this.newMessage.trim().length > 0) {
                     this.contacts[this.currentChat].messages.push(newMessage);
 
@@ -153,6 +154,7 @@ Vue.config.devtools = true;
                     },1000);
                 }
             },
+            
          }
      }
  )
