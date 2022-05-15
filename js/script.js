@@ -154,6 +154,20 @@ Vue.config.devtools = true;
                     },1000);
                 }
             },
+
+            searchContact() {
+
+                this.contacts.forEach((element) => {
+
+                    const filterName = element.name.toLowerCase();
+                    const filterSearch = this.search.toLowerCase();
+                    if (filteredName.includes(filteredSearch)) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                })
+            },
             
          }
      }
